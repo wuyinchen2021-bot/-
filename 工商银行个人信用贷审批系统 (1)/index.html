@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>中国工商银行 - 内部智能信用审批系统 | ICBC Smart Credit Approval System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+              kaiti: ['STKaiti', 'KaiTi', '楷体', 'serif'],
+            },
+            colors: {
+              icbc: {
+                red: '#C7000B',
+                darkRed: '#a00009',
+                gold: '#D4AF37',
+                gray: '#F8F9FA',
+                border: '#E9ECEF',
+                text: '#1A1A1A',
+                muted: '#6C757D'
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #F8F9FA;
+        background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+        background-size: 24px 24px;
+      }
+      .glass {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+      .dossier-card {
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        border: 1px solid #E9ECEF;
+      }
+      .form-input-focus:focus {
+        border-color: #C7000B;
+        box-shadow: 0 0 0 3px rgba(199, 0, 11, 0.1);
+      }
+      @keyframes scan {
+        0% { top: 0; }
+        100% { top: 100%; }
+      }
+      .scan-line {
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #C7000B, transparent);
+        position: absolute;
+        width: 100%;
+        animation: scan 2s linear infinite;
+        z-index: 10;
+        opacity: 0.5;
+      }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.37.0",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="text-icbc-text font-sans m-0 p-0 overflow-x-hidden">
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

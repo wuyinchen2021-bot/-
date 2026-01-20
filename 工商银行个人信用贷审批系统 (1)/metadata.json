@@ -1,0 +1,5 @@
+{
+  "name": "工商银行个人信用贷审批系统",
+  "description": "An internal intelligent credit assessment and approval system for Industrial and Commercial Bank of China, featuring automated risk evaluation and real-time processing simulation.",
+  "requestFramePermissions": []
+}
